@@ -115,9 +115,9 @@
 - name: Setup CI/CD pipeline
   hosts: localhost
   tasks:
-    - name: Checkout CI/CD demo code..
+    - name: Checkout CI/CD demo ..
       git:
-        repo: 'https://github.com/nenadmudri/openshift-cd-demo'
+        repo: 'https://github.com/injeti-dxc/repo.git'
         dest: /root/openshift-cd-demo
     - name: Permissions..
       shell: sed -i -e 's/\r$//' /root/openshift-cd-demo/scripts/provision.sh
