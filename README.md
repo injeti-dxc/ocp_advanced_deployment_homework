@@ -20,7 +20,7 @@ OCP used : 3.10.34
 * exmaine the deployed OpenShift to ensure that all of the homework were deployed successfully.
 
 
-To install: ansible-playbook ./ocp_advanced_deployment_homework/homework.yaml
+To install: ansible-playbook /root/ocp_advanced_deployment_homework/homework.yaml
 
 
-To uninstall: sh ./ocp_advanced_deployment_homework/scripts/uninstall.sh
+To uninstall:  /root/ocp_advanced_deployment_homework/scripts/uninstall.sh
