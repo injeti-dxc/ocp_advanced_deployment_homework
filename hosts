@@ -75,8 +75,9 @@ os_sdn_network_plugin_name='redhat/openshift-ovs-networkpolicy'
 
 # Set up http authentication
 # uncomment the following to enable htpasswd authentication; defaults to DenyAllPasswordIdentityProvider
-openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider'}]
-openshift_master_htpasswd_file=/root/htpasswd.openshift
+#openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider'}]
+#openshift_master_htpasswd_file=/root/htpasswd.openshift
+openshift_master_htpasswd_users={'admin':'$apr1$8RyJ8EHP$niF29aAGt5Nh00ojbU5vO0','ankit':'$apr1$1vuZq/U0$Aq0Kz3wk0YPleDz/rTCdK0','andrew':'$apr1$dZPb2ECf$ercevOFO5znrynUfUj4tb/','briany':'$apr1$KjULqmcD$XrhyYt2nWuiaQkbciDIcN/','brett':'$apr1$gTPaNeq0$sqWJDPZ5//ZDjLf0dSbUh1'}
 
 # LDAP Authentication (download ipa-ca.crt first)
 # openshift_master_identity_providers=[{'name': 'ldap', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider','attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['uid']}, 'bindDN': 'uid=admin,cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com', 'bindPassword': 'r3dh4t1!', 'ca': '/etc/origin/master/ipa-ca.crt','insecure': 'false', 'url': 'ldaps://ipa.shared.example.opentlc.com:636/cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com?uid?sub?(memberOf=cn=ocp-users,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com)'}]
